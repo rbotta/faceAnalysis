@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<toc version="2.0">
+<!-- First tocitem specifies top level in Help browser Contents pane -->
+<!-- This can be a roadmap page, as shown below, or a content page -->
+    <tocitem target="tb_product_page.html">TOOLBOX_NAME_ONLY
+        <!-- Nest tocitems to create hierarchical entries in  Contents-->
+        <!-- To include icons, use the following syntax for tocitems: -->
+        <!-- <tocitem target="foo.html" image="HelpIcon.NAME"> -->
+        <!-- Title-of-Section </tocitem> -->
+        <!-- where NAME is one of the following (use capital letters): -->
+        <!-- FUNCTION, USER_GUIDE, EXAMPLES, BLOCK, GETTING_STARTED, -->
+        <!-- DEMOS, RELEASE_NOTES --> 
+        <!-- Icon images used for these entries are also stored in -->
+        <!-- matlabroot/toolbox/matlab/icons -->
+        <!-- A Getting Started Guide usually comes first -->
+     <!-- "Getting started" comes first -->
+        <tocitem target="tb_getting_started.html" image="HelpIcon.GETTING_STARTED">
+            Getting Started
+        </tocitem>
+     <!-- User Guide comes next -->
+        <tocitem target="tb_user_guide.html" image="HelpIcon.USER_GUIDE">
+            User Guide
+		<!-- Insert user guide items Here! -->
+        </tocitem>
+     <!-- Function reference next -->
+     <!-- First item is page describing function categories, if any -->
+        <tocitem target="tb_functions_by_cat.html" image="HelpIcon.FUNCTION">Function Reference
+		<!-- Insert Function List Here! -->
+        </tocitem>
+        <tocitem target="tb_release_notes.html" image="HelpIcon.RELEASE_NOTES">Release Notes
+        </tocitem>
+        <!-- Optional List of Examples, with hyperlinks to examples in other files -->
+        <!-- Optional Function Reference by category comes next -->
+        <tocreference target="helpfuncbycat.xml" image="HelpIcon.FUNCTION">
+        </tocreference>
+        
+        <!-- Demos -->
+        <tocitem target="xxx.html" image="HelpIcon.DEMO">Applications
+        <!-- Insert Demo List Here! -->
+        </tocitem>
+        <tocitem target="http://mirlab.org/jang/books/dcpr" image="$toolbox/matlab/icons/webicon.gif">
+        Tutorial on the Methods of TOOLBOX_NAME
+        </tocitem>
+    </tocitem>
+</toc>

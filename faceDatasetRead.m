@@ -6,12 +6,12 @@ function faceInfoList = faceDatasetRead(dirName, extName, plotOpt, saveOpt, save
 %	Description:
 %
 %	Example:
-%		faceInfoList = faceDatasetRead('../dataset/PAL', 'bmp', 0, 1, 'faceInfoList.mat');
+%		faceInfoList = faceDatasetRead('./demoDataset/Custom', 'jpg', 1, 1, 'faceInfoList.mat');
 %
-%	See also faceDetect, getTuningFace
+%	See also faceDetect, faceTune
 
-%	Category:
-%	Mymy, 20121205, 20121212
+%	Category: faceAnalysis
+%	Mymy, 20121205, 20130102
 
 if nargin < 1, selfdemo; return; end
 if nargin < 2, extName = 'bmp'; end

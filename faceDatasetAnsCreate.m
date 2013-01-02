@@ -1,8 +1,22 @@
 function ansList = faceDatasetAnsCreate( dirName, saveOpt)
-%FACEDATASETANSCREATE Summary of this function goes here
-%   Detailed explanation goes here
-existDataset = {'PAL', 'bmp'; 'Caltech', 'jpg'; 'Custom', 'jpg'; 'JAFFE', 'tiff'};
+%faceDatasetAnsCreate: create all answer from dataset
+%
+%	Usage:
+%
+%	Description:
+%
+%	Example:
+%		ansList = faceDatasetAnsCreate('./demoDataset/Custom');
+%
+%	See also faceDatasetRead
 
+%	Category: faceAnalysis
+%	Mymy, 20121205, 20130102
+
+if nargin < 1, selfdemo; return; end
+if nargin < 2, saveOpt = 1; end
+
+existDataset = {'PAL', 'bmp'; 'Caltech', 'jpg'; 'Custom', 'jpg'; 'JAFFE', 'tiff'};
 name = split(dirName, '/');
 name = name{length(name)};
 display('Start to create answer list....')
@@ -50,5 +64,10 @@ switch name
 			fprintf('progress==>%d / %d\n', i, length(fileList));
 		end
 end
-if saveOpt, save([dirName '.mat'],'ansList'); end
+if saveOpt, save([name '.mat'],'ansList'); end
 display('Done.');
+
+% ====== Self demo
+function selfdemo
+mObj=mFileParse(which(mfilename));
+strEval(mObj.example);

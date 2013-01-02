@@ -1,18 +1,17 @@
 function allRecog = svmArguTune(DsName, isPCA, isLDA, pcaNum, ldaNum)
-% svmArguTune: find the best arguments for the max recog. rate
-% === Input === 
-% DsName: name od the DS
-% isPCA: Apply PCA or not
-% isLDA: Apply LDA or not
-% pcaNum: No. of selected eigenvectors
-% ldaNum: No. of discriminant vectors 
-% === Output ===
-% DS: an all recog. rate matrix
-% === Example ===
-% DS = goTuneSVMArgu('AgeDS_LBP', 1, 1);
-% DS = goTuneSVMArgu('GenderDS_myLBP');
+%svmArguTune: find the best arguments for the max recog. rate
+%
+%	Usage:
+%
+%	Description:
+%
+%	Example:
+%
+%	See also faceDetect, faceTune
 
-% Mymy, 20121126
+%	Category: Utility
+%	Mymy, 20121205, 20130102
+
 addpath(genpath('./libsvm-3.11'));
 load(DsName);
 
@@ -42,4 +41,15 @@ maxRecog = max(allRecog(:));
 fprintf('The max recog. rate is %d\n', maxRecog);
 [row col] = find(abs(allRecog - maxRecog) < 0.005);
 fprintf('The best arguments are G:%d, C:%d\n', allG(row(1)), allC(col(1)));
-
+% svmArguTune: find the best arguments for the max recog. rate
+% === Input === 
+% DsName: name od the DS
+% isPCA: Apply PCA or not
+% isLDA: Apply LDA or not
+% pcaNum: No. of selected eigenvectors
+% ldaNum: No. of discriminant vectors 
+% === Output ===
+% DS: an all recog. rate matrix
+% === Example ===
+% DS = goTuneSVMArgu('AgeDS_LBP', 1, 1);
+% DS = goTuneSVMArgu('GenderDS_myLBP');

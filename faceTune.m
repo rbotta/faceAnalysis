@@ -1,13 +1,18 @@
 function [ newI, oriPTS, oriFaceRect ] = faceTune( I, rect, resolution, plot_opt )
-%GETTUNINGFACE Summary of this function goes here
-%   Detailed explanation goes here
-% === Input ===
-% I: image data
-% resolution: [width height]
-% === output ===
-% newI: m*n gray image
-% faceRect: [x1 y1 width height]
+%faceTune: tune the angle of the face to the horizontal
+%
+%	Usage:
+%
+%	Description:
+%
+%	Example:
+%		I = imread('./demoDataset/images.jpeg');
+%		faceTune(I, faceDetect(I, 1), [57 76], 1);
+%
+%	See also faceDetect
 
+%	Category: faceAnalysis
+%	Mymy, 20121205, 20130102
 
 if nargin < 1, selfdemo; return; end
 [h, w, dim]=size(I);
@@ -19,10 +24,15 @@ if nargin < 4, plot_opt = 1; end
 % disp('---Tuning Face---');
 
 % toolbox path setting
-addpath(genpath('../toolbox/FaceTuning'));
+%addpath(genpath('../toolbox/FaceTuning'));
 %addpath(genpath('./CoordinationRotate'));
 I = imcrop(I, rect);
-[~, PTS] = faceDetection(I);
+try 
+	[~, PTS] = faceDetection(I);
+catch
+	fprintf('Warning, you should add the FaceTuning toolbox first!\n');
+	return;
+end
 oriPTS = PTS;
 oriPTS(1,:) = oriPTS(1,:) + rect(1);
 oriPTS(2,:) = oriPTS(2,:) + rect(2);
@@ -112,13 +122,16 @@ if (plot_opt)
     
     subplot(1, 2, 2); imshow(histeq(newI)); xlabel('Face after Resizing.')
 end
-end
 
 function selfdemo
-% addpath(genpath('./Viola_Jones'));
-% addpath(genpath('./CoordinationRotate'));
-% addpath(genpath('../FaceDetection'));
-addpath(genpath('./FaceTuning'));
-I = imread('./demoDataset/images.jpeg');
-faceTune(I, faceDetect(I, 1), [57 76], 1);
-end
+mObj=mFileParse(which(mfilename));
+strEval(mObj.example);
+
+%GETTUNINGFACE Summary of this function goes here
+%   Detailed explanation goes here
+% === Input ===
+% I: image data
+% resolution: [width height]
+% === output ===
+% newI: m*n gray image
+% faceRect: [x1 y1 width height]
