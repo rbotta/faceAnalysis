@@ -28,7 +28,7 @@ if exist([dirName '.mat'],'file'), load([dirName '.mat']);
 else ansList = faceDatasetAnsCreate(dirName, 1);
 end
     
-faceInfoList = cell(length(fileList),1);
+faceInfoList = struct([]);
 display('Start to get all face Info. ...');
 for i = 1:length(fileList)
     tmpI = imread(fileList(i).path);
@@ -42,15 +42,15 @@ for i = 1:length(fileList)
     if size(faceRect, 1) > 1, [~, idx] = max(faceRect(:,3)); faceRect = faceRect(idx,:); end
     
     [~, PTS, faceRectWithTuning] = faceTune(tmpI, faceRect, [57 76], plotOpt);
-    faceInfoList{i}.filename = fileList(i).path;
-    faceInfoList{i}.faceRect = faceRect;
-    faceInfoList{i}.faceRectWithTuning = faceRectWithTuning;
-    faceInfoList{i}.PTS = PTS;
+    faceInfoList(i,1).filename = fileList(i).path;
+    faceInfoList(i,1).faceRect = faceRect;
+    faceInfoList(i,1).faceRectWithTuning = faceRectWithTuning;
+    faceInfoList(i,1).PTS = PTS;
 	
-	if isfield(ansList,'gender'), faceInfoList{i}.gender = ansList(i).gender; end
-	if isfield(ansList,'age'), faceInfoList{i}.age = ansList(i).age; end
-	if isfield(ansList,'expression'), faceInfoList{i}.expression = ansList(i).expression; end
-	if isfield(ansList,'ID'), faceInfoList{i}.ID = ansList(i).ID; end
+	if isfield(ansList,'gender'), faceInfoList(i,1).gender = ansList(i).gender; end
+	if isfield(ansList,'age'), faceInfoList(i,1).age = ansList(i).age; end
+	if isfield(ansList,'expression'), faceInfoList(i,1).expression = ansList(i).expression; end
+	if isfield(ansList,'ID'), faceInfoList(i,1).ID = ansList(i).ID; end
 	
     fprintf('progress==>%d / %d\n', i, length(fileList));
     if plotOpt, close all; end

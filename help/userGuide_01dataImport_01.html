@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Visualization of a wafer map (Temp version, need to be changed.)</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-02"><meta name="DC.source" content="userGuide_01dataImport_01.m"><style type="text/css">
+      --><title>Knowing information of the face dataset</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-22"><meta name="DC.source" content="userGuide_01dataImport_01.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -55,21 +55,127 @@ span.syscmd { color:#B28C00 }
 .footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
 .footer p { margin:0px; }
 
-  </style></head><body><div class="content"><h1>Visualization of a wafer map (Temp version, need to be changed.)</h1><p>The Wafer Analysis Toolbox provides several functions for visualization wafer maps.</p><p>To visualize a single wafer map, use "waferPlot":</p><pre class="codeinput"><span class="comment">%fileName='N3M090.xls';</span>
-<span class="comment">%lot=lotRead(fileName, 1);</span>
-<span class="comment">%waferPlot(lot.wafer);</span>
-</pre><p>Copyright 2011-2012 <a href="http://mirlab.org/jang">Jyh-Shing Roger Jang</a>.</p><p class="footer"><br>
+  </style></head><body><div class="content"><h1>Knowing information of the face dataset</h1><p>The Face Analysis Toolbox provides several functions to read dataset and plot dataset information</p><p>The following demonstrates how to read dataset, and then use "faceInfoPlot" to plot the information:</p><pre class="codeinput">dataSet = <span class="string">'../demoDataset/PAL'</span>;
+faceInfoList = faceDatasetRead(dataSet, <span class="string">'bmp'</span>);
+faceInfoPlot(faceInfoList);
+</pre><pre class="codeoutput">Start to create answer list....
+Choose PAL dataset.
+progress==&gt;1 / 50
+progress==&gt;2 / 50
+progress==&gt;3 / 50
+progress==&gt;4 / 50
+progress==&gt;5 / 50
+progress==&gt;6 / 50
+progress==&gt;7 / 50
+progress==&gt;8 / 50
+progress==&gt;9 / 50
+progress==&gt;10 / 50
+progress==&gt;11 / 50
+progress==&gt;12 / 50
+progress==&gt;13 / 50
+progress==&gt;14 / 50
+progress==&gt;15 / 50
+progress==&gt;16 / 50
+progress==&gt;17 / 50
+progress==&gt;18 / 50
+progress==&gt;19 / 50
+progress==&gt;20 / 50
+progress==&gt;21 / 50
+progress==&gt;22 / 50
+progress==&gt;23 / 50
+progress==&gt;24 / 50
+progress==&gt;25 / 50
+progress==&gt;26 / 50
+progress==&gt;27 / 50
+progress==&gt;28 / 50
+progress==&gt;29 / 50
+progress==&gt;30 / 50
+progress==&gt;31 / 50
+progress==&gt;32 / 50
+progress==&gt;33 / 50
+progress==&gt;34 / 50
+progress==&gt;35 / 50
+progress==&gt;36 / 50
+progress==&gt;37 / 50
+progress==&gt;38 / 50
+progress==&gt;39 / 50
+progress==&gt;40 / 50
+progress==&gt;41 / 50
+progress==&gt;42 / 50
+progress==&gt;43 / 50
+progress==&gt;44 / 50
+progress==&gt;45 / 50
+progress==&gt;46 / 50
+progress==&gt;47 / 50
+progress==&gt;48 / 50
+progress==&gt;49 / 50
+progress==&gt;50 / 50
+Done.
+Start to get all face Info. ...
+progress==&gt;1 / 50
+progress==&gt;2 / 50
+progress==&gt;3 / 50
+progress==&gt;4 / 50
+progress==&gt;5 / 50
+progress==&gt;6 / 50
+progress==&gt;7 / 50
+progress==&gt;8 / 50
+progress==&gt;9 / 50
+progress==&gt;10 / 50
+progress==&gt;11 / 50
+progress==&gt;12 / 50
+progress==&gt;13 / 50
+progress==&gt;14 / 50
+progress==&gt;15 / 50
+progress==&gt;16 / 50
+progress==&gt;17 / 50
+progress==&gt;18 / 50
+progress==&gt;19 / 50
+progress==&gt;20 / 50
+progress==&gt;21 / 50
+progress==&gt;22 / 50
+progress==&gt;23 / 50
+progress==&gt;24 / 50
+progress==&gt;25 / 50
+progress==&gt;26 / 50
+progress==&gt;27 / 50
+progress==&gt;28 / 50
+progress==&gt;29 / 50
+progress==&gt;30 / 50
+progress==&gt;31 / 50
+progress==&gt;32 / 50
+progress==&gt;33 / 50
+progress==&gt;34 / 50
+progress==&gt;35 / 50
+progress==&gt;36 / 50
+progress==&gt;37 / 50
+progress==&gt;38 / 50
+progress==&gt;39 / 50
+progress==&gt;40 / 50
+progress==&gt;41 / 50
+progress==&gt;42 / 50
+progress==&gt;43 / 50
+progress==&gt;44 / 50
+progress==&gt;45 / 50
+progress==&gt;46 / 50
+progress==&gt;47 / 50
+progress==&gt;48 / 50
+progress==&gt;49 / 50
+progress==&gt;50 / 50
+Done.
+</pre><img vspace="5" hspace="5" src="userGuide_01dataImport_01_01.png" alt=""> <p>Copyright 2012-2013 <a href="http://mirlab.org/jang">Jyh-Shing Roger Jang</a>.</p><p class="footer"><br>
       Published with MATLAB&reg; 7.14<br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Visualization of a wafer map (Temp version, need to be changed.)
-% The Wafer Analysis Toolbox provides several functions for visualization wafer maps.
+%% Knowing information of the face dataset
+% The Face Analysis Toolbox provides several functions to read dataset and
+% plot dataset information
 %
-% To visualize a single wafer map, use "waferPlot":
-%fileName='N3M090.xls';
-%lot=lotRead(fileName, 1);
-%waferPlot(lot.wafer);
+% The following demonstrates how to read dataset, and then use "faceInfoPlot" to plot the information:
+dataSet = '../demoDataset/PAL';
+faceInfoList = faceDatasetRead(dataSet, 'bmp');
+faceInfoPlot(faceInfoList);
 %%
-% Copyright 2011-2012 <http://mirlab.org/jang Jyh-Shing Roger Jang>.
+% Copyright 2012-2013 <http://mirlab.org/jang Jyh-Shing Roger Jang>.
 
 ##### SOURCE END #####
 --></body></html>

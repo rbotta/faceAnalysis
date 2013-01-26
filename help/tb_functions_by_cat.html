@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Functions by Category</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-02"><meta name="DC.source" content="tb_functions_by_cat.m"><style type="text/css">
+      --><title>Functions by Category</title><meta name="generator" content="MATLAB 7.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-01-22"><meta name="DC.source" content="tb_functions_by_cat.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -55,22 +55,31 @@ span.syscmd { color:#B28C00 }
 .footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
 .footer p { margin:0px; }
 
-  </style></head><body><div class="content"><h1>Functions by Category</h1><!--introduction--><p>Face Analysis Toolbox Version 1.0, % Requires MATLAB&reg; 7.14.0.739 (R2012a) 02-Jan-2013</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Utility</a></li><li><a href="#2">faceAnalysis</a></li></ul></div><h2>Utility<a name="1"></a></h2><div><ul><li><a href="svmArguTune_help.html"><tt>svmArguTune</tt></a> - find the best arguments for the max recog. rate</li><li><a href="toolboxInfo_help.html"><tt>toolboxInfo</tt></a> - Toolbox information</li></ul></div><h2>faceAnalysis<a name="2"></a></h2><div><ul><li><a href="faceDatasetAnsCreate_help.html"><tt>faceDatasetAnsCreate</tt></a> - create all answer from dataset</li><li><a href="faceDatasetRead_help.html"><tt>faceDatasetRead</tt></a> - get all face information into a cell array</li><li><a href="faceDetect_help.html"><tt>faceDetect</tt></a> - face detection</li><li><a href="faceTune_help.html"><tt>faceTune</tt></a> - tune the angle of the face to the horizontal</li></ul></div><p class="footer"><br>
+  </style></head><body><div class="content"><h1>Functions by Category</h1><!--introduction--><p>Face Analysis Toolbox Version 1.0, % Requires MATLAB&reg; 7.14.0.739 (R2012a) 22-Jan-2013</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Feature Extraction</a></li><li><a href="#2">Utility</a></li><li><a href="#3">faceAnalysis</a></li></ul></div><h2>Feature Extraction<a name="1"></a></h2><div><ul><li><a href="LBP_help.html"><tt>LBP</tt></a> - Local Binary Pattern</li><li><a href="LDP_help.html"><tt>LDP</tt></a> - Local Directional Pattern</li><li><a href="LTP_help.html"><tt>LTP</tt></a> - Local Ternary Pattern</li></ul></div><h2>Utility<a name="2"></a></h2><div><ul><li><a href="faceRoot_help.html"><tt>faceRoot</tt></a> - Root of FAT (Face Analysis Toolbox)</li><li><a href="svmArguTune_help.html"><tt>svmArguTune</tt></a> - find the best arguments for the max recog. rate</li><li><a href="svmLoo_help.html"><tt>svmLoo</tt></a> - Leave-one-out recognition rate of SVM</li><li><a href="toolboxInfo_help.html"><tt>toolboxInfo</tt></a> - Toolbox information</li></ul></div><h2>faceAnalysis<a name="3"></a></h2><div><ul><li><a href="faceDatasetAnsCreate_help.html"><tt>faceDatasetAnsCreate</tt></a> - create all answer from dataset</li><li><a href="faceDatasetRead_help.html"><tt>faceDatasetRead</tt></a> - get all face information into a cell array</li><li><a href="faceDetect_help.html"><tt>faceDetect</tt></a> - face detection</li><li><a href="faceDsCreate_help.html"><tt>faceDsCreate</tt></a> - create face DS for classification</li><li><a href="faceInfoPlot_help.html"><tt>faceInfoPlot</tt></a> - plot face information</li><li><a href="faceTune_help.html"><tt>faceTune</tt></a> - tune the angle of the face to the horizontal</li></ul></div><p class="footer"><br>
       Published with MATLAB&reg; 7.14<br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Functions by Category
 % Face Analysis Toolbox
 % Version 1.0, %
-% Requires MATLAB(R) 7.14.0.739 (R2012a) 02-Jan-2013
+% Requires MATLAB(R) 7.14.0.739 (R2012a) 22-Jan-2013
+%
+%% Feature Extraction
+% * <LBP_help.html |LBP|> - Local Binary Pattern 
+% * <LDP_help.html |LDP|> - Local Directional Pattern 
+% * <LTP_help.html |LTP|> - Local Ternary Pattern 
 %
 %% Utility
+% * <faceRoot_help.html |faceRoot|> - Root of FAT (Face Analysis Toolbox)
 % * <svmArguTune_help.html |svmArguTune|> - find the best arguments for the max recog. rate
+% * <svmLoo_help.html |svmLoo|> - Leave-one-out recognition rate of SVM
 % * <toolboxInfo_help.html |toolboxInfo|> - Toolbox information
 %
 %% faceAnalysis
 % * <faceDatasetAnsCreate_help.html |faceDatasetAnsCreate|> - create all answer from dataset
 % * <faceDatasetRead_help.html |faceDatasetRead|> - get all face information into a cell array
 % * <faceDetect_help.html |faceDetect|> - face detection
+% * <faceDsCreate_help.html |faceDsCreate|> - create face DS for classification
+% * <faceInfoPlot_help.html |faceInfoPlot|> - plot face information
 % * <faceTune_help.html |faceTune|> - tune the angle of the face to the horizontal
 %
 

@@ -1,9 +1,10 @@
-%% Visualization of a wafer map (Temp version, need to be changed.)
-% The Wafer Analysis Toolbox provides several functions for visualization wafer maps.
+%% Knowing information of the face dataset
+% The Face Analysis Toolbox provides several functions to read dataset and
+% plot dataset information
 %
-% To visualize a single wafer map, use "waferPlot":
-%fileName='N3M090.xls';
-%lot=lotRead(fileName, 1);
-%waferPlot(lot.wafer);
+% The following demonstrates how to read dataset, and then use "faceInfoPlot" to plot the information:
+dataSet = '../demoDataset/PAL';
+faceInfoList = faceDatasetRead(dataSet, 'bmp');
+faceInfoPlot(faceInfoList);
 %%
-% Copyright 2011-2012 <http://mirlab.org/jang Jyh-Shing Roger Jang>.
+% Copyright 2012-2013 <http://mirlab.org/jang Jyh-Shing Roger Jang>.

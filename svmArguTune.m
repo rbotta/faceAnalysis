@@ -7,7 +7,7 @@ function allRecog = svmArguTune(DsName, isPCA, isLDA, pcaNum, ldaNum)
 %
 %	Example:
 %
-%	See also faceDetect, faceTune
+%	See also toolboxInfo
 
 %	Category: Utility
 %	Mymy, 20121205, 20130102

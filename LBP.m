@@ -1,4 +1,18 @@
 function [patchHist, lbpIm] = LBP(im, patchSideNum, plotOpt)
+%LBP: Local Binary Pattern 
+%
+%	Usage:
+%
+%	Description:
+%
+%	Example:
+%		im=imread('./demoDataset/sample.jpg');
+%		[patchHist, lbpIm]=LBP(im, 8, 1);
+%
+%	See also LDP, LTP
+
+%	Category: Feature Extraction
+%	Roger Jang, Mymy, 20130109, 20130109
 
 if nargin<1, selfdemo; return; end
 if nargin<2, patchSideNum=8; end	% divide image into patchSideNum*patchSideNum sub-blocks
@@ -53,5 +67,5 @@ end
 
 % ====== Self demo
 function selfdemo
-im=imread('sample.jpg');
-[patchHist, lbpIm]=LBP(im, 8, 1);
+mObj=mFileParse(which(mfilename));
+strEval(mObj.example);

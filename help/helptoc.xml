@@ -23,7 +23,8 @@
             User Guide
 		<!-- Insert user guide items Here! -->
 		<tocitem target="xxx.html#1">Import
-			<tocitem target="userGuide_01dataImport_01.html">Visualization of a wafer map (Temp version, need to be changed.)</tocitem>
+			<tocitem target="userGuide_01dataImport_01.html">Knowing information of the face dataset</tocitem>
+			<tocitem target="userGuide_01dataImport_02.html">Knowing the basic example of gender classification</tocitem>
 		</tocitem>
 
         </tocitem>
@@ -31,14 +32,23 @@
      <!-- First item is page describing function categories, if any -->
         <tocitem target="tb_functions_by_cat.html" image="HelpIcon.FUNCTION">Function Reference
 		<!-- Insert Function List Here! -->
-		<tocitem target="tb_functions_by_cat.html#1">Utility
+		<tocitem target="tb_functions_by_cat.html#1">Feature Extraction
+			<tocitem target="LBP_help.html">LBP</tocitem>
+			<tocitem target="LDP_help.html">LDP</tocitem>
+			<tocitem target="LTP_help.html">LTP</tocitem>
+		</tocitem>
+		<tocitem target="tb_functions_by_cat.html#2">Utility
+			<tocitem target="faceRoot_help.html">faceRoot</tocitem>
 			<tocitem target="svmArguTune_help.html">svmArguTune</tocitem>
+			<tocitem target="svmLoo_help.html">svmLoo</tocitem>
 			<tocitem target="toolboxInfo_help.html">toolboxInfo</tocitem>
 		</tocitem>
-		<tocitem target="tb_functions_by_cat.html#2">faceAnalysis
+		<tocitem target="tb_functions_by_cat.html#3">faceAnalysis
 			<tocitem target="faceDatasetAnsCreate_help.html">faceDatasetAnsCreate</tocitem>
 			<tocitem target="faceDatasetRead_help.html">faceDatasetRead</tocitem>
 			<tocitem target="faceDetect_help.html">faceDetect</tocitem>
+			<tocitem target="faceDsCreate_help.html">faceDsCreate</tocitem>
+			<tocitem target="faceInfoPlot_help.html">faceInfoPlot</tocitem>
 			<tocitem target="faceTune_help.html">faceTune</tocitem>
 		</tocitem>
 
