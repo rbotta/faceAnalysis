@@ -34,6 +34,11 @@ for i = 1:length(faceInfo)
             DS.input(:, i) = LDP(cropFace)'; 
         case 'LTP'
             DS.input(:, i) = LTP(cropFace)'; 
+		case 'garbor'
+			I = imresize(cropFace, [57 76], 'bicubic');
+			I = histeq(uint8(I));
+			I = double(I)/255;
+			DS.input(:, i) = gaborFilter(histeq(I));
         otherwise
             display('We have no this method!');
     end
@@ -48,6 +53,12 @@ for i = 1:length(faceInfo)
 			if strcmp(faceInfo(i).gender, 'male'), DS.output(1,i) = 1; end
 			if strcmp(faceInfo(i).gender, 'female'), DS.output(1,i) = 2; end
 		case 'expression'
+			if strcmp(faceInfo(i).expression, 'HA'), DS.output(1,i) = 1; end
+			if strcmp(faceInfo(i).expression, 'SA'), DS.output(1,i) = 2; end
+			if strcmp(faceInfo(i).expression, 'SU'), DS.output(1,i) = 3; end
+			if strcmp(faceInfo(i).expression, 'AN'), DS.output(1,i) = 4; end
+			if strcmp(faceInfo(i).expression, 'DI'), DS.output(1,i) = 5; end
+			if strcmp(faceInfo(i).expression, 'FE'), DS.output(1,i) = 6; end
         otherwise
             display('We have no this type!');
 	end
@@ -61,6 +72,7 @@ switch type
 	case 'gender'
 		DS.outputName = {'male', 'female'};
 	case 'expression'
+		DS.outputName = {'HA', 'SA', 'SU', 'AN', 'DI', 'FE'};
 	otherwise
 		display('We have no this type!');
 end

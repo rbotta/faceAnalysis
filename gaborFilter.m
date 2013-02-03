@@ -1,4 +1,4 @@
-function [ TTT ] = gaborFilter( I, ROIs )
+function [ patch ] = gaborFilter( I, ROIs )
 %PERFECTGABORFILTER Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -19,10 +19,10 @@ imgSize = 0;
 for i=1:size(ROIs, 1)
     imgSize = imgSize + (ROIs(i, 3) - ROIs(i, 1) + 1) * (ROIs(i, 4) - ROIs(i, 2) + 1);
 end
-patch = zeros(1, imgSize*3*4);
-TTT = []; %for LGBP
-for s = 1:3
-    for j = 1:4
+patch = zeros(1, imgSize*5*8);
+
+for s = 1:5
+    for j = 1:8
         output = imfilter(I,G{s,9-j});
         output = sqrt(double(real(output).*real(output)...
             + imag(output).*imag(output))); 
@@ -39,16 +39,10 @@ for s = 1:3
         
         % normalization
         roi_max = max( roiPatch);
-        %roi_min = min( roiPatch);
-        %roiPatch = roiPatch./roi_max;%(roiPatch - roi_min) ./ (roi_max - roi_min);
-        I=output;%imresize(histeq(cropFace),[80 80]);
-        [w h]=size(I);    
-        I2 = zeros(w+2, h+2);
-        I2(2:w+1,2:h+1) = I(:,:);
-        %ttt = my_LBP(1, w, h, double(I), double(I2));
-        ttt = LBP(I,1)';
-        TTT = [TTT ttt];
-        %patch(((s*j-1)*imgSize+1):s*j*imgSize) = roiPatch;
+        roi_min = min( roiPatch);
+        roiPatch = (roiPatch - roi_min) ./ (roi_max - roi_min);
+        
+        patch(((s*j-1)*imgSize+1):s*j*imgSize) = roiPatch;
     end
 end
 
