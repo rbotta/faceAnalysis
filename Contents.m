@@ -11,6 +11,7 @@
 %   svmArguTune - find the best arguments for the max recog. rate
 %   svmLoo      - Leave-one-out recognition rate of SVM
 %   toolboxInfo - Toolbox information
+%   rotation    - Rotate Coordination
 %
 % faceAnalysis
 %   faceDatasetAnsCreate - create all answer from dataset
@@ -19,3 +20,4 @@
 %   faceDsCreate         - create face DS for classification
 %   faceInfoPlot         - plot face information
 %   faceTune             - tune the angle of the face to the horizontal
+%   facialFeatDetect     - facial features detection
